@@ -32,11 +32,11 @@ const MagneticButton = ({ children, href, onClick, variant = "primary", classNam
   };
 
   const baseClasses = cn(
-    "group relative inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-medium text-sm tracking-wide transition-colors",
+    "group relative inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-bold text-xs uppercase tracking-widest transition-all duration-300",
     variant === "primary" &&
-      "bg-gradient-aurora text-primary-foreground shadow-glow-soft hover:shadow-glow-primary",
+      "bg-white text-black shadow-xl hover:bg-zinc-200 active:scale-95",
     variant === "ghost" &&
-      "glass text-foreground hover:text-primary",
+      "glass-premium text-foreground hover:text-white active:scale-95",
     className,
   );
 

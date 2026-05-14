@@ -1,107 +1,131 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
-import NanoParticles from "./NanoParticles";
+import { Link } from "react-router-dom";
+import { ArrowUpRight, Sparkles, TrendingUp, ShieldCheck, Award, Zap, Layers } from "lucide-react";
+import Magnetic from "./Magnetic";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-transparent overflow-hidden" id="home">
-      <NanoParticles />
-      {/* Minimalist Aurora Animation */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[20%] -left-[10%] w-[70vw] h-[70vw] rounded-full opacity-60 mix-blend-screen"
-          style={{ background: 'radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)' }}
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [0, -90, 0],
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-[20%] -right-[10%] w-[60vw] h-[60vw] rounded-full opacity-60 mix-blend-screen"
-          style={{ background: 'radial-gradient(circle, hsl(var(--secondary) / 0.15) 0%, transparent 70%)' }}
-        />
-      </div>
+    <section className="relative pt-32 sm:pt-40 pb-20 overflow-hidden" id="home">
+      {/* Modern Premium Background Gradients & Abstract Shapes */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[80vw] h-[500px] bg-gradient-to-tr from-purple-600/10 via-cyan-500/5 to-transparent rounded-full blur-[140px] pointer-events-none animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute top-40 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Content container */}
-      <div className="relative z-10 pointer-events-none w-full max-w-7xl px-6 md:px-10 lg:px-16 flex flex-col items-start justify-center text-left pt-20">
+      <div className="relative z-10 container max-w-7xl px-6 md:px-10 mx-auto flex flex-col items-center text-center">
         
-        {/* Agency Badge */}
-        <div 
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6 animate-fade-up opacity-0"
-          style={{ animationDelay: "0.1s" }}
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-          </span>
-          Award-Winning Creative Studio
+        {/* Elite Top Dynamic Availability Capsule */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-xl text-xs font-bold tracking-widest text-purple-300 uppercase mb-8 shadow-[0_0_30px_rgba(168,85,247,0.15)] animate-bounce duration-1000">
+          <Sparkles className="w-3.5 h-3.5 text-purple-400" /> Digital Studio & Engineering Mastery
         </div>
 
-        <h1
-          className="font-display text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold leading-[1.1] tracking-[-0.02em] text-foreground mb-6 uppercase animate-fade-up opacity-0 max-w-4xl flex flex-col items-start"
-          style={{ animationDelay: "0.2s" }}
-        >
-          <span className="block">WE BUILD <span className="text-primary">DIGITAL</span></span>
-          <span className="block">PRODUCTS.</span>
+        {/* Hyper-Premium Bold Heading */}
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight uppercase text-white max-w-6xl leading-[1.02] mb-8">
+          Crafting Elite <br className="hidden sm:inline" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-400 to-white">
+            Digital Masterpieces.
+          </span>
         </h1>
 
-        <p
-          className="text-foreground/90 text-[clamp(1.125rem,2.5vw,1.75rem)] font-medium mb-6 md:mb-8 animate-fade-up opacity-0 max-w-3xl leading-snug"
-          style={{ animationDelay: "0.4s" }}
-        >
-          Crafting immersive web experiences and brand identities that <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">convert visitors into customers.</span>
+        {/* Sophisticated Description Paragraph */}
+        <p className="text-zinc-400 text-base sm:text-lg md:text-xl font-light max-w-3xl leading-relaxed mb-12">
+          Transforming ambitious concepts into dominant visual platforms. Architected with uncompromising clean code, multi-layered frosted glass physics, and micro-interaction mechanics.
         </p>
 
-        <div
-          className="w-16 h-1 bg-primary/50 mb-8 animate-fade-up opacity-0 rounded-full"
-          style={{ animationDelay: "0.5s" }}
-        ></div>
-
-        <p
-          className="text-muted-foreground text-[clamp(0.875rem,1.25vw,1.125rem)] font-light mb-10 md:mb-12 animate-fade-up opacity-0 max-w-2xl leading-relaxed"
-          style={{ animationDelay: "0.6s" }}
-        >
-          We partner with ambitious brands to design and engineer enterprise-grade web solutions, blending stunning visual aesthetics with modern, scalable architectures.
-        </p>
-
-        <div
-          className="flex flex-col sm:flex-row items-center justify-start gap-4 font-bold animate-fade-up opacity-0 w-full sm:w-auto"
-          style={{ animationDelay: "0.75s" }}
-        >
-          <a href="#contact" className="pointer-events-auto bg-primary text-primary-foreground px-8 py-4 text-base rounded-full cursor-pointer hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:brightness-110 transition-all duration-300 active:scale-[0.97] inline-flex items-center justify-center w-full sm:w-fit min-w-[180px] group">
-            Book a Call
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-          <a href="#projects" className="pointer-events-auto bg-transparent border border-border hover:bg-white/5 text-foreground px-8 py-4 text-base rounded-full cursor-pointer transition-all duration-300 active:scale-[0.97] inline-flex items-center justify-center w-full sm:w-fit min-w-[180px]">
-            Our Work
-          </a>
+        {/* Action Triggers with Magnetic Wrapping */}
+        <div className="flex flex-wrap justify-center items-center gap-5 mb-20 w-full max-w-md sm:max-w-none">
+          <Magnetic strength={0.2}>
+            <Link 
+              to="/work" 
+              className="w-full sm:w-auto px-10 py-5 rounded-full bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 text-white font-bold text-xs uppercase tracking-[0.2em] hover:opacity-95 transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.4)] flex items-center justify-center gap-2 active:scale-[0.98]"
+            >
+              View Our Works <ArrowUpRight className="w-4 h-4 text-white" />
+            </Link>
+          </Magnetic>
+          <Magnetic strength={0.15}>
+            <a 
+              href="/#contact" 
+              className="w-full sm:w-auto px-10 py-5 rounded-full glass-premium font-bold text-xs uppercase tracking-[0.2em] text-white hover:text-purple-300 transition-all duration-300 flex items-center justify-center gap-2 active:scale-[0.98]"
+            >
+              Contact Us
+            </a>
+          </Magnetic>
         </div>
 
-        <div
-          className="flex items-center gap-4 mt-16 animate-fade-up opacity-0"
-          style={{ animationDelay: "0.9s" }}
-        >
-          <div className="flex -space-x-3">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-10 h-10 rounded-full bg-border border-2 border-background flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-muted animate-pulse"></div>
-              </div>
-            ))}
+        {/* Interactive Cinematic Mockup Stack */}
+        <div className="w-full max-w-5xl relative mt-4">
+          
+          {/* Floating Aesthetic Stats Badges */}
+          <div className="hidden lg:flex absolute -left-16 top-1/4 z-20 glass-premium px-6 py-4 rounded-2xl border-purple-500/20 items-center gap-3.5 shadow-[0_0_30px_rgba(168,85,247,0.15)] animate-pulse">
+            <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
+              <Zap className="w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <div className="text-xs font-bold text-white uppercase tracking-wider">Sub-second renders</div>
+              <div className="text-[10px] text-purple-300/80 font-mono">&lt; 100ms TTI benchmark</div>
+            </div>
           </div>
-          <p className="text-muted-foreground/80 text-sm font-medium">
-            Trusted by <span className="text-foreground">100+</span> companies worldwide.
-          </p>
+
+          <div className="hidden lg:flex absolute -right-16 top-1/3 z-20 glass-premium px-6 py-4 rounded-2xl border-cyan-500/20 items-center gap-3.5 shadow-[0_0_30px_rgba(6,182,212,0.15)]">
+            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400">
+              <Layers className="w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <div className="text-xs font-bold text-white uppercase tracking-wider">Design Architecture</div>
+              <div className="text-[10px] text-cyan-300/80 font-mono">Curated premium UI systems</div>
+            </div>
+          </div>
+
+          {/* Central Mockup Engine Frame */}
+          <div className="mockup-frame aspect-[16/10] w-full p-2 sm:p-4 bg-zinc-950/90 rounded-[2.5rem] border-purple-500/20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95),_0_0_60px_-10px_rgba(168,85,247,0.2)]">
+            <div className="w-full h-full rounded-3xl overflow-hidden relative bg-zinc-950 border border-white/5 flex flex-col justify-between p-8 sm:p-12 text-left">
+              
+              {/* Premium cinematic background artwork */}
+              <div className="absolute inset-0 opacity-40 mix-blend-luminosity bg-cover bg-center transition-transform duration-1000 hover:scale-105" style={{ backgroundImage: `url('/work-jdm.png')` }} />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-950/20 via-transparent to-cyan-950/20 mix-blend-overlay" />
+              
+              {/* Top window console interface */}
+              <div className="relative z-10 flex items-center justify-between border-b border-white/10 pb-6">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-red-500/60 inline-block shadow-sm" />
+                  <span className="w-3 h-3 rounded-full bg-yellow-500/60 inline-block shadow-sm" />
+                  <span className="w-3 h-3 rounded-full bg-green-500/60 inline-block shadow-sm" />
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-purple-400 animate-ping" />
+                  <span className="text-[10px] font-mono text-purple-300 tracking-widest uppercase bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+                    Live Interaction Engine
+                  </span>
+                </div>
+              </div>
+
+              {/* Core focus block */}
+              <div className="relative z-10 max-w-2xl my-auto py-8">
+                <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-3 bg-cyan-500/10 px-2.5 py-1 rounded-md border border-cyan-500/20">
+                  <TrendingUp className="w-3 h-3" /> Immersive Visual Profile
+                </div>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-white leading-tight mb-4 tracking-tight">
+                  Uncompromising Visual Craftsmanship.
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed max-w-xl">
+                  Pioneering responsive spatial portals built for ultra-slow museum-grade continuous preview navigations. Providing a competitive layout presence.
+                </p>
+              </div>
+
+              {/* Bottom specification footer */}
+              <div className="relative z-10 pt-6 border-t border-white/10 flex items-center justify-between text-zinc-400 text-xs">
+                <div className="flex items-center gap-2 font-medium">
+                  <Award className="w-4 h-4 text-purple-400" />
+                  <span className="text-white font-bold">State of the Art Protocol</span>
+                </div>
+                <span className="font-mono text-[10px] text-cyan-400 bg-white/[0.03] px-2.5 py-1 rounded border border-white/5">v3.0.0 Hyper</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
   );
